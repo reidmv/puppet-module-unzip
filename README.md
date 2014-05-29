@@ -1,5 +1,7 @@
 # Unzip #
 
+Windows only.
+
 Given a source zip file and a directory/file that should result when it is
 extracted, this defined type implicitly ensures that an archive is
 extracted.
