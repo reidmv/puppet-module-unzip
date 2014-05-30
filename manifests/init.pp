@@ -41,8 +41,8 @@ define unzip (
     undef   => unzip_dirname($creates),
   }
 
-  exec { 'unzip':
-    command  => "\$sh=New-Object -COM Shell.Application;\$sh.namespace(Convert-Path '$dest').Copyhere(\$sh.namespace(Convert-Path '$source').items())",
+  exec { "unzip $source to $dest":
+    command  => "\$sh=New-Object -COM Shell.Application;\$sh.namespace((Convert-Path '$dest')).Copyhere(\$sh.namespace((Convert-Path '$source')).items(), 16)",
     creates  => $creates,
     provider => powershell,
   }
