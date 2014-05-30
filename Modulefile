@@ -1,5 +1,5 @@
 name    'reidmv-unzip'
-version '0.1.0'
+version '0.1.1'
 source 'UNKNOWN'
 author 'reidmv'
 license 'Apache License, Version 2.0'
