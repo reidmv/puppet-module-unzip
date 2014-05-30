@@ -38,11 +38,11 @@ define unzip (
 
   $dest = $destination ? {
     default => $destination,
-    undef   => dirname($creates),
+    undef   => unzip_dirname($creates),
   }
 
   exec { 'unzip':
-    command  => "\$sh=New-Object -COM Shell.Application;\$sh.namespace('$dest').Copyhere(\$sh.namespace('$source').items())",
+    command  => "\$sh=New-Object -COM Shell.Application;\$sh.namespace(Convert-Path '$dest').Copyhere(\$sh.namespace(Convert-Path '$source').items())",
     creates  => $creates,
     provider => powershell,
   }
