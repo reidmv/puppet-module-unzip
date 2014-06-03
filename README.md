@@ -28,7 +28,7 @@ destination.
 
 ## Examples ##
 
-    archive { "example":
+    unzip { "example":
       source  => 'C:\src\bar.zip',
       creates => 'C:\test\bar',
     }
