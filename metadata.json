@@ -1,0 +1,19 @@
+{
+  "name": "reidmv-unzip",
+  "version": "0.1.2",
+  "author": "Reid Vandewiele",
+  "license": "Apache License, Version 2.0",
+  "summary": "Defined type for unzipping files on Windows",
+  "source": "https://github.com/reidmv/puppet-module-unzip",
+  "project_page": "https://github.com/reidmv/puppet-module-unzip",
+  "issues_url": "https://github.com/reidmv/puppet-module-unzip/issues",
+  "tags": ["windows", "unzip"],
+  "operatingsystem_support": [
+    {
+    "operatingsystem":"windows"
+    }
+  ],
+  "dependencies": [
+    { "name": "puppetlabs/powershell", "version_requirement": ">=1.0.0" }
+  ]
+}
